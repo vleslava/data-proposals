@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>PPG México — Data Proposal for Market & Territory Analysis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --font-heading:'Montserrat',system-ui,sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --dark-navy:#090E2A;--text:#162946;--grey:#6F777C;--softblue:#F2F6F9;--white:#FFF;
+  --builder-blue:#036FE2;--shade-blue:#C0DBF8;--red:#EB1510;--green:#47DB99;--jade:#11A2B8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);color:var(--text);background:var(--white);font-size:14px;line-height:1.55}
+.hero{background:var(--dark-navy);color:#fff;padding:36px 40px}
+.hero .logo{font-family:var(--font-heading);font-weight:700;font-size:18px;letter-spacing:2px}
+.badge{display:inline-block;background:var(--builder-blue);color:#fff;font-size:11px;font-weight:700;padding:2px 10px;border-radius:10px;margin-left:10px;vertical-align:middle}
+.hero h1{font-family:var(--font-heading);font-size:26px;margin:14px 0 8px}
+.hero p{color:var(--shade-blue);max-width:840px}
+.meta{display:flex;gap:28px;margin-top:16px;flex-wrap:wrap}
+.meta div{font-size:12px;color:var(--shade-blue)}
+.meta b{display:block;color:#fff;font-size:13px}
+main{max-width:1000px;margin:0 auto;padding:32px 40px}
+h2{font-family:var(--font-heading);font-size:20px;margin:34px 0 6px}
+h2:first-of-type{margin-top:0}
+h4{font-family:var(--font-heading);font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--grey);margin:26px 0 4px}
+.sub{color:var(--grey);margin-bottom:14px}
+table{width:100%;border-collapse:collapse;margin:10px 0 6px}
+th{font-weight:700;text-align:left;padding:10px 12px;border-bottom:2px solid var(--text);font-size:13px}
+td{padding:10px 12px;border-bottom:1px solid #E8E8E8;vertical-align:top}
+tr:nth-child(even) td{background:var(--softblue)}
+a{color:var(--builder-blue);text-decoration:none}
+code{background:var(--softblue);padding:1px 5px;border-radius:4px;font-size:12px}
+.pill{display:inline-block;font-size:11px;font-weight:600;padding:1px 8px;border-radius:9px;white-space:nowrap}
+.yes{background:#E2F8EE;color:#0B7A4B}.part{background:#FFF3D6;color:#8A6100}.no{background:#FDE4E3;color:#A31310}.own{background:var(--shade-blue);color:var(--text)}
+.prem{background:var(--shade-blue);color:var(--text)}.pub{background:#E2F8EE;color:#0B7A4B}
+.callout{border-left:4px solid var(--builder-blue);background:var(--softblue);padding:12px 16px;border-radius:0 8px 8px 0;margin:14px 0}
+.ds{border:1px solid rgba(0,0,0,.07);border-radius:8px;padding:16px 18px;margin:12px 0}
+.ds h3{font-family:var(--font-body);font-weight:700;font-size:15px;margin-bottom:4px}
+.ds .prov{color:var(--grey);font-size:12px;margin-bottom:8px}
+footer{background:var(--dark-navy);color:var(--shade-blue);padding:18px 40px;font-size:11px;margin-top:40px;display:flex;justify-content:space-between}
+footer span{color:#fff;font-family:var(--font-heading);font-weight:700;letter-spacing:2px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="logo">CARTO</span><span class="badge">PREPARED FOR PPG MÉXICO</span>
+  <h1>Data for Market Understanding, Territory Design &amp; White Space Analysis</h1>
+  <p>PPG México's Data Lab is building a view of market potential and commercial coverage across <b>Mexico</b>, complementing PPG's internal information with external data on population, purchasing power, points of interest and mobility. This document maps each requested data category to the datasets CARTO's Data Observatory delivers today for Mexico, all combinable at AGEB, municipio, postal code or road-segment level in CARTO.</p>
+  <div class="meta">
+    <div><b>Prepared by</b>CARTO Data Partnerships</div>
+    <div><b>Date</b>September 2026</div>
+    <div><b>Geography</b>Mexico (national coverage)</div>
+  </div>
+</div>
+
+<main>
+
+<h2>Requested vs. available — at a glance</h2>
+<p class="sub">✅ available in the Data Observatory · 🔹 PPG México's own data</p>
+<table>
+  <tr><th>Requested</th><th>Status</th><th>Where it comes from</th></tr>
+  <tr><td>Sociodemographic data</td><td><span class="pill yes">DO — premium</span></td><td>Michael Bauer International (MBI) Basic Sociodemographics at AGEB and municipio: annually updated population, households and age structure by gender, on the same geography as MBI's economic datasets.</td></tr>
+  <tr><td>Market potential &amp; economic characterization</td><td><span class="pill yes">DO — premium</span></td><td>MBI Purchasing Power and Consumer Spending at AGEB — disposable income plus household expenditure broken down into 20 categories, including tools and equipment for house and garden and routine household maintenance, the closest proxies for decorative-paint demand.</td></tr>
+  <tr><td>Points of interest (POI)</td><td><span class="pill yes">DO — premium</span></td><td>Two options for a national, categorised, brand-resolved POI layer: HERE Points of Interest (global reference provider, quarterly) or dataPlor Places (Latin America specialist, monthly, with open/closed status and popularity).</td></tr>
+  <tr><td>Mobility &amp; traffic variables</td><td><span class="pill yes">DO — premium</span></td><td>TomTom Traffic Density and Speed Profiles per road segment (vehicle flows and speeds by hour and weekday); MBI Daytime Population at AGEB for where people are during working hours.</td></tr>
+  <tr><td>PPG sell-out, store network &amp; customer accounts</td><td><span class="pill own">PPG México data</span></td><td>PPG México's own records — the calibration layer that turns the external variables above into a market-potential model and a white-space map specific to PPG's channels.</td></tr>
+</table>
+
+<h2>Proposed Data Observatory datasets</h2>
+<p class="sub">One provider per data type, latest available versions. All MBI layers share the same AGEB / municipio <code>geoid</code>; POI and traffic layers join spatially, so PPG México can build territories and score white space at the granularity that fits each channel.</p>
+
+<h4>Sociodemographics &amp; market potential</h4>
+
+<div class="ds">
+  <h3><a href="https://carto.com/spatial-data-catalog/dataset/mbi_sociodemogr_b7fa268e" target="_blank">Basic Sociodemographics - Mexico (AGEB-Areas and Municipios) ↗</a> <span class="pill prem">Premium</span></h3>
+  <div class="prov">Michael Bauer International (MBI) · 2026 · AGEB areas + municipios · updated annually · also at <a href="https://carto.com/spatial-data-catalog/dataset/mbi_sociodemogr_adc095d0" target="_blank">municipio ↗</a> and <a href="https://carto.com/spatial-data-catalog/dataset/mbi_sociodemogr_9791d54b" target="_blank">5-digit postal code ↗</a></div>
+  <p>Current-year estimates of resident population (<code>P_T</code>), households and household size (<code>HH_T</code>, <code>HH_SIZE</code>) and population by gender and five age bands (<code>AGE_T0014</code>, <code>AGE_T1529</code>, <code>AGE_T3044</code>, <code>AGE_T4559</code>, <code>AGE_T60PL</code>, with <code>AGE_F…</code> / <code>AGE_M…</code> splits) for every AGEB and municipio in Mexico, refreshed every year so territory sizing does not drift as cities grow. <code>P_PRM</code> expresses each area's share of the national population, a convenient weight for normalising indicators across territories. Because MBI publishes its economic datasets on the same geographies, all of them join on the same <code>geoid</code> with no re-aggregation.</p>
+</div>
+
+<div class="ds">
+  <h3><a href="https://carto.com/spatial-data-catalog/dataset/mbi_purchasingp_7ca21141" target="_blank">Purchasing Power - Mexico (AGEB-Areas and Municipios) ↗</a> &amp; <a href="https://carto.com/spatial-data-catalog/dataset/mbi_consumerspe_a2b6203f" target="_blank">Consumer Spending - Mexico (AGEB-Areas and Municipios) ↗</a> <span class="pill prem">Premium</span></h3>
+  <div class="prov">Michael Bauer International (MBI) · Purchasing Power 2026 · Consumer Spending 2026 · AGEB areas + municipios · updated annually · Consumer Spending: 20 expenditure categories × 4 measures</div>
+  <p>These are the market-potential indicators the Data Lab is looking for. Purchasing Power gives disposable income per capita (<code>PP_EURO</code>), as a total per area (<code>PP_MIO</code>) and as an index against the national average (<code>PP_CI</code>, country = 100). Consumer Spending breaks household expenditure into 20 categories, each with the same four measures (per capita, total, index and share of country); the ones that matter most for a coatings business are <b>tools and equipment for house and garden</b> (<code>CS10_EURO</code>, <code>CS10_MIO</code>, <code>CS10_CI</code>) and <b>routine household maintenance</b> (<code>CS11_EURO</code>, <code>CS11_MIO</code>, <code>CS11_CI</code>), with <b>furniture and furnishings</b> (<code>CS06_*</code>) and <b>household appliances</b> (<code>CS08_*</code>) as signals of home-improvement activity. Summed per AGEB, they give a category-specific addressable-market estimate — the numerator of any white-space analysis — and a fair basis for balancing sales territories by potential rather than by area.</p>
+</div>
+
+<h4>Points of interest — two options</h4>
+
+<div class="ds">
+  <h3><a href="https://carto.com/spatial-data-catalog/dataset/here_points_of_i_e50924ad" target="_blank">Points Of Interest - Mexico (Latitude/Longitude) ↗</a> <span class="pill prem">Premium · Option A</span></h3>
+  <div class="prov">HERE · v1 · point geometry · updated quarterly (annual licence also available) · global reference POI provider</div>
+  <p>HERE's curated POI database for Mexico, with a consistent global category system (<code>category_id</code>, <code>category_name</code>), chain identification (<code>chain_id</code>, <code>chain_name</code>), full address in original and transliterated form (<code>address_original</code>, <code>postal_code</code>), contact details (<code>contacts</code>) and per-record quality scores for name, address and openness (<code>quality_is_name_correct</code>, <code>quality_is_address_correct</code>, <code>quality_is_open</code>). The best fit when PPG México wants a stable, well-documented reference layer to map hardware and paint retailers, automotive workshops and construction-related businesses, and to keep category definitions consistent with other markets.</p>
+</div>
+
+<div class="ds">
+  <h3><a href="https://carto.com/spatial-data-catalog/dataset/dtpl_places_64cbd3c5" target="_blank">Places, monthly - Mexico (Latitude/Longitude) ↗</a> <span class="pill prem">Premium · Option B</span></h3>
+  <div class="prov">dataPlor · v3 · point geometry · refreshed monthly (quarterly and annual licences also available) · Latin America specialist</div>
+  <p>A living commercial POI layer built for Latin American markets: brand-resolved (<code>chain_name</code>, <code>chain_id</code>), hierarchically categorised (<code>main_category</code> → <code>sub_category</code> → <code>business_category</code>, plus <code>naics_code</code>), with current operating status (<code>open_status</code>, <code>dataplor_status</code>) and engagement signals (<code>popularity_score</code>, <code>dwell_time</code>). The best fit when PPG México wants to track competitor and partner outlets as they open and close month by month, and to weight commercial presence by how busy places are rather than by counts alone. Every record carries a <code>data_quality_confidence_score</code> for transparent filtering.</p>
+</div>
+
+<h4>Mobility &amp; traffic</h4>
+
+<div class="ds">
+  <h3><a href="https://carto.com/spatial-data-catalog/dataset/tt_traffic_den_9c639ae9" target="_blank">Traffic Density - Mexico (Road Segment) ↗</a> &amp; <a href="https://carto.com/spatial-data-catalog/dataset/tt_speed_profi_9a0c8898" target="_blank">Speed Profiles - Mexico (Road Segment) ↗</a> <span class="pill prem">Premium</span></h3>
+  <div class="prov">TomTom · Traffic Density 2024-06 · Speed Profiles 2022-12 · road-segment linestrings · updated semesterly / annually</div>
+  <p>Vehicle traffic from TomTom's probe network on every road segment in Mexico. Traffic Density gives probe counts per weekday and hour (<code>mon</code> … <code>sun</code>, <code>fri_17</code>, <code>sat_11</code>), i.e. how much passing traffic a store front or distributor site is exposed to and when; Speed Profiles add free-flow and time-slot speeds (<code>SPFREEFLOW</code>, <code>speed</code>, <code>REL_SP</code>) for congestion-aware drive-time catchments. Together they support store-accessibility scoring and realistic delivery-territory design for PPG México's distribution.</p>
+</div>
+
+<div class="ds">
+  <h3><a href="https://carto.com/spatial-data-catalog/dataset/mbi_daytimepopu_c70dc5b1" target="_blank">Daytime Population - Mexico (AGEB-Areas and Municipios) ↗</a> <span class="pill prem">Premium</span></h3>
+  <div class="prov">Michael Bauer International (MBI) · 2025 · AGEB areas + municipios · updated annually</div>
+  <p>A mobility variable on the same geography as the MBI sociodemographics: daytime population (<code>P_D</code>) against resident population (<code>P_T</code>) per AGEB. The ratio flags employment and commercial hubs that resident-only analysis undercounts — typically where professional painters and contractors buy during the working day — and joins to the other MBI layers on <code>geoid</code>.</p>
+</div>
+
+<div class="callout">
+  PPG México's own <b>sell-out by store and distributor, store and partner network, and customer accounts</b> is the highest-value ingredient it already owns: joined to the layers above, it calibrates a market-potential model on real performance and turns "high potential, low coverage" areas into a ranked white-space list per channel.
+</div>
+
+<div class="callout" style="border-color:var(--jade)">
+  <b>Pricing:</b> all datasets in this proposal are premium; pricing depends on scope (national vs. selected states or metro areas, number of datasets and licence term) and will be quoted by the CARTO Data Partnerships team once PPG México selects its priority layers.
+</div>
+
+</main>
+
+<footer>
+  <span>CARTO</span>
+  <div>Prepared for PPG México · CARTO Data Partnerships · September 2026 · Confidential</div>
+</footer>
+</body>
+</html>
